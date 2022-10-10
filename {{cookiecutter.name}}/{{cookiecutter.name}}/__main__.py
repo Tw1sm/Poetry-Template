@@ -1,6 +1,6 @@
 import typer
-from template.logger import init_logger, logger, console
-from template import __version__
+from {{cookiecutter.name}}.logger import init_logger, logger, console
+from {{cookiecutter.name}} import __version__
 
 app = typer.Typer(
     add_completion=False,
@@ -10,7 +10,7 @@ app = typer.Typer(
 )
 
 
-@app.command(no_args_is_help=True, help='Poetry Template')
+@app.command(no_args_is_help=True, help='{{cookiecutter.name}} help!')
 def main(
     debug: bool = typer.Option(False, '--debug', help='Enable [green]DEBUG[/] output')):
 
@@ -18,4 +18,4 @@ def main(
 
 
 if __name__ == '__main__':
-    app(prog_name='template')
+    app(prog_name='{{cookiecutter.name}}')
