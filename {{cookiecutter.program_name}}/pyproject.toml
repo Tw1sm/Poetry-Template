@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "{{cookiecutter.program_name}}"
+version = "0.1.0"
+description = ""
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+readme = "README.md"
+homepage = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.program_name}}"
+repository = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.program_name}}"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rich = "^12.5.1"
+typer = "^0.6.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.235"
+pytest = "^7.2.1"
+pre-commit = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+{{cookiecutter.program_name}} = "{{cookiecutter.program_name}}.__main__:app"
