@@ -14,12 +14,22 @@ OBJ_EXTRA_FMT = {
 logger = logging.getLogger(__name__)
 
 def init_logger(debug):
-    richHandler = RichHandler(omit_repeated_times=False, show_path=True, keywords=[], console=console)
+    richHandler = RichHandler(
+        omit_repeated_times=False,
+        show_path=True,
+        keywords=[],
+        console=console
+    )
     
     if debug:
         logger.setLevel(logging.DEBUG)
     else:
         logger.setLevel(logging.INFO)
 
-    richHandler.setFormatter(logging.Formatter(FORMAT, datefmt='[%X]'))
+    richHandler.setFormatter(
+        logging.Formatter(
+            FORMAT,
+            datefmt='[%X]'
+        )
+    )
     logger.addHandler(richHandler)
