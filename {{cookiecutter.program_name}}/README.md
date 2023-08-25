@@ -2,7 +2,7 @@
 
 
 ## Install
-{{cookiecutter.program_name}} can be installed by cloning this repository and running pip3 install . and subsequently executed from PATH with {{cookiecutter.program_name}}
+{{cookiecutter.program_name}} can be installed by cloning this repository and running `pip3 install .` and subsequently executed from PATH with {{cookiecutter.program_name}}
 
 ## Usage
 
